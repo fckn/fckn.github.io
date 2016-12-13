@@ -1,4 +1,4 @@
-@import 'normalize';
+//@import 'normalize';
 /* media */
 $phones: 319px;
 $small-screen: 479px;
@@ -68,6 +68,10 @@ html {
   }
 body {
     font-family: Helvetica, sans-serif;
+    width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 a {
     text-decoration: none;
@@ -203,7 +207,9 @@ ul {
 Синій - 212C62
 Сірий - EDEDED
 */
-
+#form {
+    background: #cecec7;
+}
 /* section one */
 .row_1 {
     padding: 100px 0 0 0;
@@ -215,7 +221,29 @@ ul {
     width: 100px;
     height: 100px;
 }
+.section-txt {
+    padding-left: 10%;
+    @include flexbox();
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-basis: 100%;
+    list-style-type: disc;
+}
 
+.section-upbtn {
+    margin: 2% 0 0 0;
+    display: block;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 25px 30px 25px;
+	opacity: .7;
+	transition: all .3s ease;
+    &:hover {
+        transform: translateY(-10px);
+	    opacity: 1;
+    }
+}
 .section {
     width: 100%;
     height: 100vh;
@@ -270,6 +298,9 @@ ul {
 .row_2_txt {
     margin: 10% 0;
 }
+.row_2_upbtn {
+    border-color: transparent transparent #212C62 transparent;
+}
 
 .row_3 {
     padding: 2% 0;
@@ -280,9 +311,11 @@ ul {
     }
 }
 
-
 .row_3_txt {
     margin: 10% 0;
+}
+.row_3_upbtn {
+    border-color: transparent transparent #FAA41A transparent;
 }
 
 .row_4 {
@@ -306,6 +339,9 @@ ul {
     
 }
 
+.row_4_upbtn {
+    border-color: transparent transparent #faa41a transparent;
+}
 .footer_content {
     text-align: center;
     li {
@@ -339,45 +375,5 @@ ul {
     }
 }
 
-.row_2_upbtn {
-    border-color: transparent transparent #212C62 transparent;
-}
-
-.section-upbtn {
-    margin: 2% 0 0 0;
-    display: block;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 0 25px 30px 25px;
-	opacity: .7;
-	transition: all .3s ease;
-    &:hover {
-        transform: translateY(-10px);
-	    opacity: 1;
-    }
-}
-
-.row_3_upbtn {
-    border-color: transparent transparent #FAA41A transparent;
-}
-
-.row_4_upbtn {
-    border-color: transparent transparent #faa41a transparent;
-}
-
-.section-txt {
-    padding-left: 10%;
-    @include flexbox();
-    flex-direction: column;
-    justify-content: flex-end;
-    flex-basis: 100%;
-    list-style-type: disc;
-}
-
-
-#form {
-    background: #cecec7;
-}
 
 
