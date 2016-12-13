@@ -710,44 +710,44 @@ ul {
       color: #faa41a;
       text-decoration: none; }
 
-/* line 308, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+/* line 309, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
 .footer_content {
   text-align: center; }
-  /* line 310, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+  /* line 311, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
   .footer_content li {
     display: block;
     margin-bottom: 10px; }
-    /* line 313, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+    /* line 314, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
     .footer_content li:last-child {
       margin-bottom: 0; }
 
-/* line 319, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+/* line 320, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
 .footer {
   background: #212c62;
   color: #fff;
   padding: 2% 0; }
 
-/* line 325, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+/* line 326, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
 .footer_content_copyright {
   font-size: 12px; }
 
-/* line 329, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+/* line 330, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
 .footer_content_dev {
   font-size: 14px; }
 
-/* line 333, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+/* line 334, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
 .footer_content_nav {
   margin-bottom: 2%; }
-  /* line 335, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+  /* line 336, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
   .footer_content_nav a {
     font-weight: 700;
     color: #faa41a; }
 
-/* line 341, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+/* line 342, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
 .row_2_upbtn {
   border-color: transparent transparent #212C62 transparent; }
 
-/* line 345, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+/* line 346, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
 .section-upbtn {
   margin: 2% 0 0 0;
   display: block;
@@ -757,20 +757,20 @@ ul {
   border-width: 0 25px 30px 25px;
   opacity: .7;
   transition: all 0.3s ease; }
-  /* line 354, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+  /* line 355, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
   .section-upbtn:hover {
     transform: translateY(-10px);
     opacity: 1; }
 
-/* line 360, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+/* line 361, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
 .row_3_upbtn {
   border-color: transparent transparent #FAA41A transparent; }
 
-/* line 364, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+/* line 365, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
 .row_4_upbtn {
   border-color: transparent transparent #faa41a transparent; }
 
-/* line 368, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+/* line 369, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
 .section-txt {
   padding-left: 10%;
   display: -webkit-box;
@@ -783,7 +783,7 @@ ul {
   flex-basis: 100%;
   list-style-type: disc; }
 
-/* line 378, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+/* line 379, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
 #form {
   background: #cecec7; }
 
