@@ -72,16 +72,18 @@ a {
 ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 /* tags */
+/* form custom */
+
 .header {
     width: 100%;
-    height: 150px;
-    padding: 0 2%;
-//    position: fixed;
+//    height: 100px;
+    position: absolute;
+    text-align: center;
     background-color: #212C62;
     ul {
-      text-align: center;
       overflow: hidden;
       background-color: #FAA41A ;
      }
@@ -100,7 +102,6 @@ ul {
 }
 
 /* menu */
-
 .header_menu { 
   clear: both;
   max-height: 0;
@@ -113,8 +114,10 @@ ul {
   cursor: pointer;
   display: inline-block;
 //  float: right;
+//    transform: translateY(-50%);
   padding: 28px 20px;
   position: relative;
+//    margin-top: 15%;
   user-select: none;
 }
 
@@ -199,10 +202,174 @@ ul {
 */
 
 /* section one */
-.row1 {
-//    @include flexbox();
+.row_1 {
+    padding: 100px 0 0 0;
+    text-align: center;
+    background: url(../img/pvr_consulting.png) no-repeat center bottom;
+}
+
+.row1_logo_mobile {
+    width: 100px;
+    height: 100px;
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+    @include flexbox();
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: #212c62;
+}
+
+.row_1_contact {
+    padding: 0 0 250px 0;
+    a {
+        font-weight: 600;
+        color: #212c62;
+        text-decoration: underline;
+        transition: all .2s ease;
+        &:hover {
+            color: #faa41a;
+            text-decoration: none;
+        }
+    }
+}
+.row_1_txt {
+    width: 100%;
+    height: 100vh;
+    padding: 10% 1%;
+    @include flexbox();
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #212c62;
+    background: #ededed;
+    h2, h3, h4 {
+        margin: 0;
+    }
+    ul {
+        padding-left: 10%;
+        text-align: left;
+        list-style-type: disc;
+    }
+}
+.row_2 {
+    padding: 2% 0;
+    background: #faa41a;
+    h2 {
+        margin: 0 0 15% 0;
+    }
+}
+.row_2_txt {
+    margin: 10% 0;
+}
+
+.row_3 {
+    padding: 2% 0;
+    color: #fff;
+    background: #212c62;
+    h2 {
+        margin: 0 0 15% 0;
+    }
 }
 
 
+.row_3_txt {
+    margin: 10% 0;
+}
+
+.row_4 {
+    padding: 2% 0;
+    background: #ededed;
+}
+
+.row_4_inner {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    a {
+        color: #212c62;
+        text-decoration: underline;
+        transition: all .2s ease;
+        &:hover {
+            color: #faa41a;
+            text-decoration: none;
+        }
+    }
+}
+
+.footer_content {
+    text-align: center;
+    li {
+        display: block;
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.footer {
+    background: #212c62;
+    color: #fff;
+    padding: 2% 0;
+}
+
+.footer_content_copyright {
+    font-size: 12px;
+}
+
+.footer_content_dev {
+    font-size: 14px;
+}
+
+.footer_content_nav {
+    margin-bottom: 2%;
+    a {
+        font-weight: 700;
+        color: #faa41a;
+    }
+}
+
+.row_2_upbtn {
+    border-color: transparent transparent #212C62 transparent;
+}
+
+.section-upbtn {
+    margin: 2% 0 0 0;
+    display: block;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 25px 30px 25px;
+	opacity: .7;
+	transition: all .3s ease;
+    &:hover {
+        transform: translateY(-10px);
+	    opacity: 1;
+    }
+}
+
+.row_3_upbtn {
+    border-color: transparent transparent #FAA41A transparent;
+}
+
+.row_4_upbtn {
+    border-color: transparent transparent #faa41a transparent;
+}
+
+.section-txt {
+    padding-left: 10%;
+    @include flexbox();
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-basis: 100%;
+    list-style-type: disc;
+}
 
 
+#form {
+    background: #cecec7;
+}

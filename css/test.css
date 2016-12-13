@@ -8,7 +8,7 @@
  * production code, beware of the browser
  * prefixes.
  */
-/* line 12, D:/111/pvr_landing/css/test.scss */
+/* line 12, D:/X/OpenServer/domains/fckn.github.io/css/test.scss */
 body {
   margin: 0;
   padding: 0;
@@ -17,17 +17,17 @@ body {
   color: #cdcdcd;
   font-family: "Avenir Next", "Avenir", sans-serif; }
 
-/* line 23, D:/111/pvr_landing/css/test.scss */
+/* line 23, D:/X/OpenServer/domains/fckn.github.io/css/test.scss */
 a {
   text-decoration: none;
   color: #232323;
   transition: color 0.3s ease; }
 
-/* line 31, D:/111/pvr_landing/css/test.scss */
+/* line 31, D:/X/OpenServer/domains/fckn.github.io/css/test.scss */
 a:hover {
   color: tomato; }
 
-/* line 36, D:/111/pvr_landing/css/test.scss */
+/* line 36, D:/X/OpenServer/domains/fckn.github.io/css/test.scss */
 #menuToggle {
   display: block;
   position: relative;
@@ -37,7 +37,7 @@ a:hover {
   -webkit-user-select: none;
   user-select: none; }
 
-/* line 49, D:/111/pvr_landing/css/test.scss */
+/* line 49, D:/X/OpenServer/domains/fckn.github.io/css/test.scss */
 #menuToggle input {
   display: block;
   width: 40px;
@@ -55,7 +55,7 @@ a:hover {
 /*
  * Just a quick hamburger
  */
-/* line 69, D:/111/pvr_landing/css/test.scss */
+/* line 69, D:/X/OpenServer/domains/fckn.github.io/css/test.scss */
 #menuToggle span {
   display: block;
   width: 33px;
@@ -68,11 +68,11 @@ a:hover {
   transform-origin: 4px 0px;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
 
-/* line 89, D:/111/pvr_landing/css/test.scss */
+/* line 89, D:/X/OpenServer/domains/fckn.github.io/css/test.scss */
 #menuToggle span:first-child {
   transform-origin: 0% 0%; }
 
-/* line 94, D:/111/pvr_landing/css/test.scss */
+/* line 94, D:/X/OpenServer/domains/fckn.github.io/css/test.scss */
 #menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%; }
 
@@ -80,7 +80,7 @@ a:hover {
  * Transform all the slices of hamburger
  * into a crossmark.
  */
-/* line 103, D:/111/pvr_landing/css/test.scss */
+/* line 103, D:/X/OpenServer/domains/fckn.github.io/css/test.scss */
 #menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
@@ -89,7 +89,7 @@ a:hover {
 /*
  * But let's hide the middle one.
  */
-/* line 113, D:/111/pvr_landing/css/test.scss */
+/* line 113, D:/X/OpenServer/domains/fckn.github.io/css/test.scss */
 #menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2); }
@@ -97,7 +97,7 @@ a:hover {
 /*
  * Ohyeah and the last one should go the other direction
  */
-/* line 122, D:/111/pvr_landing/css/test.scss */
+/* line 122, D:/X/OpenServer/domains/fckn.github.io/css/test.scss */
 #menuToggle input:checked ~ span:nth-last-child(2) {
   opacity: 1;
   transform: rotate(-45deg) translate(0, -1px); }
@@ -106,7 +106,7 @@ a:hover {
  * Make this absolute positioned
  * at the top left of the screen
  */
-/* line 132, D:/111/pvr_landing/css/test.scss */
+/* line 132, D:/X/OpenServer/domains/fckn.github.io/css/test.scss */
 #menu {
   position: absolute;
   width: 300px;
@@ -121,7 +121,7 @@ a:hover {
   transform: translate(-100%, 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
 
-/* line 151, D:/111/pvr_landing/css/test.scss */
+/* line 151, D:/X/OpenServer/domains/fckn.github.io/css/test.scss */
 #menu li {
   padding: 10px 0;
   font-size: 22px; }
@@ -129,7 +129,7 @@ a:hover {
 /*
  * And let's fade it in from the left
  */
-/* line 160, D:/111/pvr_landing/css/test.scss */
+/* line 160, D:/X/OpenServer/domains/fckn.github.io/css/test.scss */
 #menuToggle input:checked ~ ul {
   transform: scale(1, 1);
   opacity: 1; }
