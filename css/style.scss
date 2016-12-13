@@ -66,6 +66,9 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit;
   }
+body {
+    font-family: Helvetica, sans-serif;
+}
 a {
     text-decoration: none;
 }
@@ -372,4 +375,9 @@ ul {
 
 #form {
     background: #cecec7;
+}
+
+.row_4_txt {
+    font-size: 18px;
+    line-height: 20px;
 }
