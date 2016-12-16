@@ -1,1 +1,550 @@
-@charset "UTF-8";body,ul{padding:0;margin:0}.header li a,a{text-decoration:none}.header,.row_1,.row_1_txt{text-align:center}html{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*,:after,:before{-webkit-box-sizing:inherit;-moz-box-sizing:inherit;box-sizing:inherit}body{font-family:Helvetica,sans-serif;width:100%;height:100%}ul{list-style-type:none}.header{width:100%;position:absolute;background-color:#212C62}.header ul{overflow:hidden;background-color:#FAA41A}.header li a{display:block;padding:20px;border-right:1px solid #f4f4f4;color:#212c62}.header li a:hover{background-color:#f4f4f4}.header_menu{clear:both;max-height:0;transition:max-height .2s ease-out}.header_menu_icon{cursor:pointer;display:inline-block;padding:28px 20px;position:relative;user-select:none}.header .header_menu_icon .navicon{width:25px;height:5px;display:block;background:#ededed;position:relative;transition:background .2s ease-out}.navicon:after,.navicon:before{width:100%;height:100%;background:#ededed;content:'';display:block;position:absolute;transition:all .2s ease-out}.navicon:before{top:10px}.navicon:after{top:-10px}.header_menu_btn{display:none}.header_menu_btn:checked~.header_menu{max-height:240px}.header_menu_btn:checked~.header_menu_icon .navicon{background:0 0}.header_menu_btn:checked~.header_menu_icon .navicon:before{transform:rotate(-45deg) translate(0,0)}.header_menu_btn:checked~.header_menu_icon .navicon:after{transform:rotate(45deg) translate(0,0)}.header_menu_btn:checked~.header_menu_icon:not(.steps) .navicon:after,.header_menu_btn:checked~.header_menu_icon:not(.steps) .navicon:before{top:0}@media only screen and (min-width:768px){.header_menu{float:right;clear:none;max-height:none}.header_menu li{float:left}.header_menu a{padding:20px 30px}.header_menu_btn,.header_menu_icon{display:none}}.section,.section-txt{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;flex-direction:column}#form{background:#cecec7}.row_1{padding:100px 0 0;background:url(../img/pvr_consulting_opt.jpg) center bottom no-repeat}.row1_logo_mobile{width:100px;height:100px}.section-txt{padding-left:10%;display:flex;justify-content:flex-end;flex-basis:100%;list-style-type:disc}.section-upbtn{margin:2% 0 0;display:block;width:0;height:0;border-style:solid;border-width:0 25px 30px;opacity:.7;transition:all .3s ease}.row_1_txt,.section{width:100%;height:100vh}.section-upbtn:hover{transform:translateY(-10px);opacity:1}.section{display:flex;align-items:center;justify-content:space-between;color:#212c62}.row_1_contact{font-size:18px;line-height:30px;padding:0 0 250px}.row_1_contact a{font-weight:600;color:#212c62;text-decoration:underline;transition:all .2s ease}.row_1_contact a:hover{color:#faa41a;text-decoration:none}.row_1_txt{padding:10% 1%;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;flex-direction:column;align-items:center;color:#212c62;background:#ededed}.row_1_txt h2,.row_1_txt h3,.row_1_txt h4{margin:0}.row_1_txt ul{padding-left:10%;text-align:left;list-style-type:disc}.footer,.row_2,.row_3,.row_4{padding:2% 0}.row_2{background:#faa41a}.row_2 h2{margin:0 0 15%}.row_2_txt{margin:10% 0}.row_2_upbtn{border-color:transparent transparent #212C62}.row_3{color:#fff;background:#212c62}.row_3 h2{margin:0 0 15%}.row_3_txt{margin:10% 0}.row_3_upbtn{border-color:transparent transparent #FAA41A}.row_4{background:#ededed}.row_4_inner{position:relative;top:50%;transform:translateY(-50%)}.row_4_inner a{color:#212c62;text-decoration:underline;transition:all .2s ease}.row_4_inner a:hover{color:#faa41a;text-decoration:none}.row_4_upbtn{border-color:transparent transparent #faa41a}.footer_content{text-align:center}.footer_content li{display:block;margin-bottom:10px}.footer_content li:last-child{margin-bottom:0}.footer{background:#212c62;color:#fff}.footer_content_copyright{font-size:12px}.footer_content_dev{font-size:14px}.footer_content_nav{margin-bottom:2%}.footer_content_nav a{font-weight:700;color:#faa41a}
+@charset "UTF-8";
+/* media */
+/* flexbox */
+/* tags */
+/* line 57, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+html, body {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 64, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+/* line 69, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+body {
+  font-family: Helvetica, sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+/* line 76, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+a {
+  text-decoration: none; }
+
+/* line 79, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
+/* form custom */
+/* line 85, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+#form {
+  background: #cecec7; }
+
+/* header */
+/* line 89, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.header {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  background-color: #212C62; }
+  /* line 94, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+  .header ul {
+    overflow: hidden;
+    background-color: #FAA41A; }
+  /* line 99, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    color: #212c62;
+    text-decoration: none; }
+    /* line 105, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+    .header li a:hover {
+      background-color: #f4f4f4; }
+
+/* menu */
+/*BUTTON*/
+/* line 114, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.wrapper {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  padding: 10px 0; }
+
+/* line 121, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+#menu-btn {
+  display: none; }
+
+/* line 125, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+label.menu-icon {
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer; }
+
+/* line 131, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.hamburger {
+  position: relative;
+  display: block;
+  width: 31px;
+  height: 6px;
+  border-radius: 6px;
+  background: #999;
+  transition: all 0.3s ease; }
+
+/* line 141, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.hamburger:before {
+  position: absolute;
+  top: -11px;
+  display: block;
+  content: '';
+  width: 31px;
+  height: 6px;
+  border-radius: 6px;
+  background: #999;
+  transition: all 0.3s ease;
+  transform-origin: 0; }
+
+/* line 154, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.hamburger:after {
+  position: absolute;
+  bottom: -11px;
+  display: block;
+  content: '';
+  width: 31px;
+  height: 6px;
+  border-radius: 6px;
+  background: #999;
+  transition: all 0.3s ease;
+  transform-origin: 0; }
+
+/* line 167, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+#menu-btn:checked ~ .menu-icon .hamburger {
+  background: none; }
+
+/* line 168, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+#menu-btn:checked ~ .menu-icon .hamburger:before {
+  transform: rotate(45deg); }
+
+/* line 169, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+#menu-btn:checked ~ .menu-icon .hamburger:after {
+  transform: rotate(-45deg); }
+
+/*BUTTON*/
+/*MENU*/
+/* line 173, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.menu-mob {
+  padding: 0;
+  transition: all 0.3s ease;
+  transform: scaleY(0);
+  transform-origin: top center; }
+
+/* line 180, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.active {
+  transform: scaleY(1); }
+
+/* line 184, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.menu-mob li {
+  list-style: none; }
+
+/* line 188, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.menu-mob li a {
+  display: block;
+  background: orange;
+  padding: 10px 0;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font: 18px Tahoma, sans-serif;
+  margin-bottom: 5px;
+  transition: all 0.3s ease; }
+
+/* line 200, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.menu-mob li a:hover {
+  background: #fff;
+  color: orange; }
+
+/*
+Оранжевий - FAA41A
+Синій - 212C62
+Сірий - EDEDED
+*/
+/* line 303, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.section {
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: #212c62; }
+  @media only screen and (min-width: 768px) {
+    /* line 303, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+    .section {
+      height: 100vh; } }
+
+/* section one */
+/* line 317, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.row_1 {
+  padding: 100px 0 0 0;
+  text-align: center;
+  background: url(../img/pvr_consulting_opt.jpg) no-repeat center bottom; }
+  @media only screen and (min-width: 768px) {
+    /* line 317, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+    .row_1 {
+      display: none; } }
+
+/* line 327, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.row1_logo_mobile {
+  width: 100px;
+  height: 100px; }
+
+/* line 331, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.section-txt {
+  margin: 15% 0;
+  padding-left: 10%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-basis: 100%;
+  list-style-type: disc; }
+  @media only screen and (min-width: 568px) {
+    /* line 331, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+    .section-txt {
+      margin: 0; } }
+
+/* line 344, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.section-upbtn {
+  margin: 2% 0 0 0;
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 25px 30px 25px;
+  opacity: .7;
+  transition: all 0.3s ease; }
+  /* line 353, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+  .section-upbtn:hover {
+    transform: translateY(-10px);
+    opacity: 1; }
+
+/* line 359, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.row_1_contact {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 0 0 250px 0; }
+  /* line 363, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+  .row_1_contact a {
+    font-weight: 600;
+    color: #212c62;
+    text-decoration: underline;
+    transition: all 0.2s ease; }
+    /* line 368, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+    .row_1_contact a:hover {
+      color: #faa41a;
+      text-decoration: none; }
+
+/* line 374, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.row_1_txt {
+  width: 100%;
+  height: 100vh;
+  padding: 10% 1%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  color: #212c62;
+  background: #ededed; }
+  /* line 385, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+  .row_1_txt h2, .row_1_txt h3, .row_1_txt h4 {
+    margin: 0; }
+  /* line 388, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+  .row_1_txt ul {
+    padding-left: 10%;
+    text-align: left;
+    list-style-type: disc; }
+    /* line 393, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+    .row_1_txt ul li:first-child {
+      text-align: center;
+      list-style-type: none;
+      margin: 0 0 5% -5%; }
+  @media only screen and (min-width: 768px) {
+    /* line 374, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+    .row_1_txt {
+      display: none; } }
+
+/* line 404, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.row_2 {
+  padding: 2% 0;
+  background: #faa41a; }
+  /* line 407, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+  .row_2 h2 {
+    margin: 0 0 5% 0; }
+  /* line 410, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+  .row_2 picture {
+    margin: 50px 0; }
+  @media only screen and (min-width: 568px) {
+    /* line 404, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+    .row_2 {
+      display: none; } }
+
+/* line 419, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.row_2_upbtn {
+  border-color: transparent transparent #212C62 transparent; }
+
+/* line 423, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.row_3 {
+  padding: 2% 0;
+  color: #fff;
+  background: #212c62; }
+  /* line 427, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+  .row_3 h2 {
+    margin: 0 0 5% 0; }
+  /* line 430, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+  .row_3 picture {
+    margin: 50px 0; }
+  @media only screen and (min-width: 568px) {
+    /* line 423, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+    .row_3 {
+      display: none;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around; }
+      /* line 438, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+      .row_3 picture {
+        margin: 0; } }
+
+/* line 447, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.row_3_upbtn {
+  border-color: transparent transparent #FAA41A transparent; }
+
+/* line 451, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.row_4 {
+  padding: 2% 0;
+  background: #ededed; }
+  @media only screen and (min-width: 568px) {
+    /* line 451, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+    .row_4 {
+      display: none; } }
+
+/* line 459, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.row_4_inner {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+  /* line 463, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+  .row_4_inner a {
+    color: #212c62;
+    text-decoration: underline;
+    transition: all 0.2s ease; }
+    /* line 467, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+    .row_4_inner a:hover {
+      color: #faa41a;
+      text-decoration: none; }
+
+/* line 474, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.row_4_upbtn {
+  border-color: transparent transparent #faa41a transparent; }
+
+/* line 477, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.footer_content {
+  text-align: center; }
+  /* line 479, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+  .footer_content li {
+    display: block;
+    margin-bottom: 10px; }
+    /* line 482, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+    .footer_content li:last-child {
+      margin-bottom: 0; }
+
+/* line 488, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.footer {
+  background: #212c62;
+  color: #fff;
+  padding: 2% 0; }
+
+/* line 494, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.footer_content_copyright {
+  font-size: 12px; }
+
+/* line 498, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.footer_content_dev {
+  font-size: 14px; }
+
+/* line 502, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.footer_content_nav {
+  margin-bottom: 2%; }
+  /* line 504, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+  .footer_content_nav a {
+    font-weight: 700;
+    color: #faa41a; }
+  @media only screen and (min-width: 568px) {
+    /* line 509, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+    .footer_content_nav li {
+      display: inline-block;
+      margin-right: 30px; } }
+
+/* line 520, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.container {
+  width: 50%; }
+  @media only screen and (min-width: 568px) {
+    /* line 520, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+    .container {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-wrap: wrap; } }
+  /* line 527, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+  .container h2 {
+    margin-left: 60px; }
+
+/* line 533, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.row_2_tablet {
+  display: none;
+  position: relative;
+  padding: 2% 0;
+  background: #faa41a; }
+  @media only screen and (min-width: 568px) {
+    /* line 533, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+    .row_2_tablet {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around; }
+      /* line 543, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+      .row_2_tablet picture {
+        margin: 0; } }
+
+/* line 549, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.row_2_upbtn_tablet {
+  bottom: 2%;
+  position: absolute;
+  border-color: transparent transparent #212C62 transparent; }
+
+/* line 555, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.row_3_tablet {
+  padding: 2% 0;
+  display: none;
+  position: relative;
+  color: #fff;
+  background: #212c62; }
+  @media only screen and (min-width: 568px) {
+    /* line 555, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+    .row_3_tablet {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around; }
+      /* line 566, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+      .row_3_tablet picture {
+        margin: 0; } }
+
+/* line 572, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.row_3_upbtn_tablet {
+  bottom: 2%;
+  position: absolute;
+  border-color: transparent transparent #FAA41A transparent; }
+
+/* line 578, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.row_4_tablet {
+  position: relative;
+  display: none;
+  padding: 2% 0;
+  background: #ededed; }
+  /* line 583, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+  .row_4_tablet a {
+    color: #212c62;
+    text-decoration: underline;
+    transition: all 0.2s ease; }
+    /* line 587, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+    .row_4_tablet a:hover {
+      color: #faa41a;
+      text-decoration: none; }
+  @media only screen and (min-width: 568px) {
+    /* line 578, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+    .row_4_tablet {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center; }
+      /* line 597, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+      .row_4_tablet h2 {
+        position: absolute;
+        top: 0; } }
+
+/* line 604, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.row_4_container {
+  margin-right: 100px; }
+
+/* line 608, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.row_one_txt {
+  width: 40%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: #212c62; }
+  /* line 615, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+  .row_one_txt h2, .row_one_txt h3, .row_one_txt h4 {
+    margin: 0; }
+  /* line 618, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+  .row_one_txt ul {
+    padding-left: 1%;
+    text-align: left;
+    list-style-type: disc; }
+    /* line 623, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+    .row_one_txt ul li:first-child {
+      text-align: center;
+      list-style-type: none; }
+
+/* line 632, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+.row_1_tablet {
+  display: none;
+  position: relative;
+  padding: 100px 0 0 0; }
+  @media only screen and (min-width: 568px) {
+    /* line 632, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+    .row_1_tablet {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around; }
+      /* line 641, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+      .row_1_tablet picture {
+        margin: 0; } }
+
+/*# sourceMappingURL=style.css.map */
