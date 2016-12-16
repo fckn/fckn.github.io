@@ -43,23 +43,8 @@ ul {
 /* line 89, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
 .header {
   width: 100%;
-  position: absolute;
-  text-align: center;
-  background-color: #212C62; }
-  /* line 94, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
-  .header ul {
-    overflow: hidden;
-    background-color: #FAA41A; }
-  /* line 99, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
-  .header li a {
-    display: block;
-    padding: 20px 20px;
-    border-right: 1px solid #f4f4f4;
-    color: #212c62;
-    text-decoration: none; }
-    /* line 105, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
-    .header li a:hover {
-      background-color: #f4f4f4; }
+  background-color: #212C62;
+  height: 60px; }
 
 /* menu */
 /*BUTTON*/
