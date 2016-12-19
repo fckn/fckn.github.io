@@ -1,11 +1,9 @@
 $(document).ready(function () {
-    "use strict";
-	$(".menu-icon").click(function () {
-        $(".menu-mob").toggleClass("active");
+	$(".header_menu_icon").click(function () {
+        $(".header_menu").toggleClass("active");
 	});
 });
 $(".item").click(function () {
-    "use strict";
-    $(".menu-mob").removeClass("active");
+    $(".header_menu").removeClass("active");
 	$("#menu-btn").prop('checked', false);
 });
