@@ -3,6 +3,7 @@ $phones: 319px;
 $small-screen: 567px;
 $medium-screen: 767px;
 $normal: 959px;
+$normal-xl: 1250px;
 $tv: 1400px;
 @mixin respond-to($media) {
   @if $media == hand {
@@ -25,6 +26,9 @@ $tv: 1400px;
   }
     @else if $media == medium-all {
     @media only screen and (min-width: $medium-screen + 1) { @content; }
+  }
+    @else if $media == medium-tv {
+    @media only screen and (min-width: $medium-screen) and (max-width: $normal-xl) { @content; }
   }
     @else if $media == normal {
     @media only screen and (min-width: $normal + 1 ) { @content; }
@@ -134,12 +138,35 @@ picture {
 	width: 100px;
 	height: 100px;
 	margin-top: 20px;
-	margin-left: 10%;
+//	margin-left: 4%;
 	float: left;
 	display: inline-block;
 	background: url(../img/pvr_logo.png) no-repeat center center;
 	@include respond-to(hand-all) {
 		display: none;
+	}
+    @include respond-to(medium-tv) {
+        margin-left: 4%;
+    }
+}
+.lang {
+	display: block;
+	position: absolute;
+	right: 5px;
+	top: 100px;
+	a {
+		display: inline-block;
+		padding: 20px 10px;
+		border-radius: 40px;
+		background: #212C62;
+		text-decoration: none;
+		color: #fff;
+		font-family: helvetica, sans-serif;
+		line-height: 0;
+		transition: all .3s ease;
+			&:hover {
+				background: #45517C;
+		}
 	}
 }
 /* menu */
@@ -536,6 +563,7 @@ picture {
         justify-content: space-around;
     }
 	@include respond-to(normal) {
+		font-size: 24px;
 		picture {
 			width: 40%;
 		}
@@ -638,6 +666,7 @@ picture {
         justify-content: space-around;
     }
 	@include respond-to(normal) {
+		font-size: 24px;
 		picture {
 			width: 40%;
 			margin-left: auto;
@@ -689,9 +718,9 @@ picture {
         }
     }
 	@include respond-to(normal) {
+		font-size: 24px;
 		h2 {
 			font-size: 65px;
-			
 		}
 	}
 }
@@ -744,6 +773,7 @@ picture {
         flex-wrap: wrap;
         justify-content: space-around;
 		background-size: 50%;
+        padding-left: 4%;
     }
 	@include respond-to(tv) {
 		background-size: 700px;
@@ -760,7 +790,6 @@ picture {
 
 .row_wrap {
 	max-width: 1200px;
-	padding: 0 0 0 4%;
+    margin: auto;
+	//padding: 0 0 0 4%;
 }
-
-
