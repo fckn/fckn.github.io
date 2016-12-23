@@ -358,7 +358,7 @@ picture {
 }
 
 .section-upbtn {
-    margin: 0 0 0 0;
+    margin: 8% 0 0 0;
     display: block;
   	width: 0;
   	height: 0;
@@ -420,13 +420,13 @@ picture {
     }
 }
 .row_2 {
-    padding: 10% 0;
+    padding: 10% 0 3% 0;
     background: #faa41a;
     h2 {
-        margin: 0 0 5% 0;
+//        margin: 0 0 5% 0;
     }
     picture {
-        margin: 4% 0;
+        margin: 4% 0 0 0;
     }
     @include respond-to(small-all) {
         display: none;
@@ -439,14 +439,14 @@ picture {
 }
 
 .row_3 {
-    padding: 10% 0;
+    padding: 10% 0 3% 0;
     color: #fff;
     background: #212c62;
     h2 {
         margin: 0 0 5% 0;
     }
     picture {
-        margin: 4% 0;
+        margin: 5% 0 0 0;
     }
     @include respond-to(small-all) {
         display: none;
@@ -766,7 +766,7 @@ picture {
 	h2 {
 	   font-size: 100px;
 	   line-height: 0;
-		margin: 150px -10px;
+		margin-left: -10px;
 	}
     @include respond-to(medium-all) {
         @include flexbox();
@@ -777,6 +777,9 @@ picture {
     }
 	@include respond-to(medium-tv) {
         padding-left: 4%;
+		h2 {
+			margin-top: 150px;
+		}
 	}
 	@include respond-to(tv) {
 		background-size: 700px;

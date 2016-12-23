@@ -318,7 +318,7 @@ picture img {
 
 /* line 360, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
 .section-upbtn {
-  margin: 0 0 0 0;
+  margin: 8% 0 0 0;
   display: block;
   width: 0;
   height: 0;
@@ -386,14 +386,11 @@ picture img {
 
 /* line 422, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
 .row_2 {
-  padding: 10% 0;
+  padding: 10% 0 3% 0;
   background: #faa41a; }
-  /* line 425, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
-  .row_2 h2 {
-    margin: 0 0 5% 0; }
   /* line 428, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
   .row_2 picture {
-    margin: 4% 0; }
+    margin: 4% 0 0 0; }
   @media only screen and (min-width: 600px) {
     /* line 422, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
     .row_2 {
@@ -405,7 +402,7 @@ picture img {
 
 /* line 441, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
 .row_3 {
-  padding: 10% 0;
+  padding: 10% 0 3% 0;
   color: #fff;
   background: #212c62; }
   /* line 445, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
@@ -413,7 +410,7 @@ picture img {
     margin: 0 0 5% 0; }
   /* line 448, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
   .row_3 picture {
-    margin: 4% 0; }
+    margin: 5% 0 0 0; }
   @media only screen and (min-width: 600px) {
     /* line 441, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
     .row_3 {
@@ -681,7 +678,7 @@ picture img {
   .row_1_tablet h2 {
     font-size: 100px;
     line-height: 0;
-    margin: 150px -10px; }
+    margin-left: -10px; }
   @media only screen and (min-width: 768px) {
     /* line 760, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
     .row_1_tablet {
@@ -697,16 +694,19 @@ picture img {
   @media only screen and (min-width: 767px) and (max-width: 1250px) {
     /* line 760, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
     .row_1_tablet {
-      padding-left: 4%; } }
+      padding-left: 4%; }
+      /* line 780, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+      .row_1_tablet h2 {
+        margin-top: 150px; } }
   @media only screen and (min-width: 1401px) {
     /* line 760, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
     .row_1_tablet {
       background-size: 700px; }
-      /* line 783, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+      /* line 786, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
       .row_1_tablet h2 {
         font-size: 150px; } }
 
-/* line 794, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
+/* line 797, D:/X/OpenServer/domains/fckn.github.io/css/style.scss */
 .row_wrap {
   max-width: 1200px;
   margin: auto; }
