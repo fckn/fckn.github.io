@@ -333,7 +333,7 @@ picture {
     padding: 100px 0 0 0;
     text-align: center;
     z-index: 0;
-    background: url(../img/pvr_consulting_opt.jpg) no-repeat center bottom;
+    background: url(../img/pvr_consulting_opt.png) no-repeat center bottom;
     @include respond-to(medium-all) {
         display: none;
     }
@@ -345,7 +345,7 @@ picture {
     height: 100px;
 }
 .section-txt {
-    margin: 15% 0;
+    margin: 25% 0 0 0;
     padding-left: 10%;
     @include flexbox();
     flex-direction: column;
@@ -391,6 +391,7 @@ picture {
 .row_1_txt {
     width: 100%;
     padding: 10% 1%;
+	border-bottom: 10px solid #ededed;
 @include flexbox();
     flex-direction: column;
     align-items: center;
@@ -419,13 +420,13 @@ picture {
     }
 }
 .row_2 {
-    padding: 2% 0;
+    padding: 10% 0;
     background: #faa41a;
     h2 {
         margin: 0 0 5% 0;
     }
     picture {
-        margin: 50px 0;
+        margin: 4% 0;
     }
     @include respond-to(small-all) {
         display: none;
@@ -438,14 +439,14 @@ picture {
 }
 
 .row_3 {
-    padding: 2% 0;
+    padding: 10% 0;
     color: #fff;
     background: #212c62;
     h2 {
         margin: 0 0 5% 0;
     }
     picture {
-        margin: 50px 0;
+        margin: 4% 0;
     }
     @include respond-to(small-all) {
         display: none;
@@ -760,11 +761,12 @@ picture {
     display: none;
     position: relative;
 	overflow: hidden;
-	background: url('../img/pvr_consulting_retina.png') no-repeat bottom right -15%;
+	background: url('../img/pvr_consulting_retina.png') no-repeat bottom right;
+	border-bottom: 10px solid #ededed;
 	h2 {
 	   font-size: 100px;
 	   line-height: 0;
-		margin-left: -10px;
+		margin: 150px -10px;
 	}
     @include respond-to(medium-all) {
         @include flexbox();
@@ -772,8 +774,10 @@ picture {
         flex-wrap: wrap;
         justify-content: space-around;
 		background-size: 50%;
-        padding-left: 4%;
     }
+	@include respond-to(medium-tv) {
+        padding-left: 4%;
+	}
 	@include respond-to(tv) {
 		background-size: 700px;
 		h2 {
@@ -791,4 +795,12 @@ picture {
 	max-width: 1200px;
     margin: auto;
 	//padding: 0 0 0 4%;
+}
+
+.wrap-tablet {
+//	background: url('../img/pvr_consulting_retina.png') no-repeat bottom right;
+}
+
+.row-2 {
+	
 }
