@@ -764,9 +764,9 @@ picture {
 	background: url('../img/pvr_consulting_retina.png') no-repeat bottom right;
 	border-bottom: 10px solid #ededed;
 	h2 {
-	   font-size: 100px;
+	   font-size: 80px;
 	   line-height: 0;
-		margin-left: -10px;
+		margin-left: -5px;
 	}
     @include respond-to(medium-all) {
         @include flexbox();
@@ -779,6 +779,7 @@ picture {
         padding-left: 4%;
 		h2 {
 			margin-top: 150px;
+			margin-bottom: 20px
 		}
 	}
 	@include respond-to(tv) {
