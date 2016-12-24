@@ -2,6 +2,7 @@
 $phones: 319px;
 $small-screen: 599px;
 $medium-screen: 767px;
+$menu-only: 810px;
 $normal: 959px;
 $normal-xl: 1250px;
 $tv: 1400px;
@@ -11,6 +12,9 @@ $tv: 1400px;
   }
   @if $media == hand-all {
     @media only screen and (min-width: $phones) and (max-width: $medium-screen) { @content; }
+  }
+	@if $media == hand-menu {
+    @media only screen and (min-width: $phones) and (max-width: $menu-only) { @content; }
   }
   @if $media == hand-small {
     @media only screen and (min-width: $phones) and (max-width: $small-screen) { @content; }
@@ -26,6 +30,12 @@ $tv: 1400px;
   }
     @else if $media == medium-screen {
     @media only screen and (min-width: $medium-screen + 1) and (max-width: $normal) { @content; }
+  }
+	@else if $media == medium-menu {
+    @media only screen and (min-width: $medium-screen + 1) and (max-width: $menu-only) { @content; }
+  }
+	@else if $media == menu-all {
+    @media only screen and (min-width: $menu-only + 1) { @content; }
   }
     @else if $media == medium-all {
     @media only screen and (min-width: $medium-screen + 1) { @content; }
@@ -141,8 +151,10 @@ picture {
 	width: 100px;
 	height: 100px;
 	margin-top: 20px;
+//	position: absolute;
+//	left: 0;
 	float: left;
-	display: inline-block;
+	display: block;
 	background: url(../img/pvr_logo.png) no-repeat center center;
 	@include respond-to(hand-all) {
 		display: none;
@@ -186,12 +198,14 @@ picture {
 .header_menu_icon {
    cursor: pointer;
    display: inline-block;
-  //  transform: translateX(-50%);
-  //  left: 50%;
+//    transform: translateX(-50%);
+//    left: 50%;
    padding: 28px 0;
    position: relative;
-  //  margin-top: 15px;
    user-select: none;
+   @include respond-to(medium-menu) {
+   		left: -7%;	
+	}
   }
 
 .header .header_menu_icon .navicon {
@@ -249,7 +263,7 @@ picture {
 
 /*  768px */
 
-@include respond-to(medium-all) {
+@include respond-to(menu-all) {
  .header_menu {
    float: right;
    clear: none;
@@ -361,6 +375,9 @@ picture {
     @include respond-to(small-all) {
         margin: 0;
     }
+	li {
+		padding-bottom: 3%;
+	}
 }
 
 .section-upbtn {
@@ -736,7 +753,7 @@ picture {
 }
 
 .row_one_txt {
-    width: 40%;
+    width: 50%;
     @include flexbox();
     flex-direction: column;
     align-items: flex-start;
@@ -770,7 +787,7 @@ picture {
 	background: url('../img/pvr_consulting_retina.png') no-repeat bottom right;
 	border-bottom: 10px solid #ededed;
 	h2 {
-	   font-size: 80px;
+	   font-size: 70px;
 	   line-height: 0;
 		margin-left: -5px;
 	}
@@ -784,14 +801,14 @@ picture {
 	@include respond-to(medium-tv) {
         padding-left: 4%;
 		h2 {
-			margin-top: 150px;
+			margin-top: 160px;
 			margin-bottom: 20px
 		}
 	}
 	@include respond-to(tv) {
 		background-size: 700px;
 		h2 {
-			font-size: 150px;
+			font-size: 130px;
 		}
 	}
 }
@@ -805,8 +822,8 @@ picture {
 	max-width: 1200px;
     margin: auto;
 	position: relative;
-	padding: 0 80px 0 0;
-	@include respond-to(hand-all) {
+	padding: 0 50px 0 0;
+	@include respond-to(hand-menu) {
 		padding: 0;
 	}
 }
