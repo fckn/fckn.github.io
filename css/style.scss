@@ -2,6 +2,7 @@
 $phones: 319px;
 $small-screen: 599px;
 $medium-screen: 767px;
+$menu-only: 810px;
 $normal: 959px;
 $normal-xl: 1250px;
 $tv: 1400px;
@@ -11,6 +12,12 @@ $tv: 1400px;
   }
   @if $media == hand-all {
     @media only screen and (min-width: $phones) and (max-width: $medium-screen) { @content; }
+  }
+	@if $media == hand-menu {
+    @media only screen and (min-width: $phones) and (max-width: $menu-only) { @content; }
+  }
+  @if $media == hand-small {
+    @media only screen and (min-width: $phones) and (max-width: $small-screen) { @content; }
   }
   @else if $media == small-screen {
     @media only screen and (min-width: $small-screen + 1) and (max-width: $medium-screen) { @content; }
@@ -23,6 +30,12 @@ $tv: 1400px;
   }
     @else if $media == medium-screen {
     @media only screen and (min-width: $medium-screen + 1) and (max-width: $normal) { @content; }
+  }
+	@else if $media == medium-menu {
+    @media only screen and (min-width: $medium-screen + 1) and (max-width: $menu-only) { @content; }
+  }
+	@else if $media == menu-all {
+    @media only screen and (min-width: $menu-only + 1) { @content; }
   }
     @else if $media == medium-all {
     @media only screen and (min-width: $medium-screen + 1) { @content; }
@@ -138,8 +151,10 @@ picture {
 	width: 100px;
 	height: 100px;
 	margin-top: 20px;
+//	position: absolute;
+//	left: 0;
 	float: left;
-	display: inline-block;
+	display: block;
 	background: url(../img/pvr_logo.png) no-repeat center center;
 	@include respond-to(hand-all) {
 		display: none;
@@ -149,24 +164,27 @@ picture {
     }
 }
 .lang {
-	display: block;
-	position: absolute;
-	right: 5px;
-	top: 100px;
-	a {
+//	display: block;
+//	right: 0;
+//	top: 0;
+//	z-index: 20;
+//	a {
+		position: absolute;
+		right: 0;
 		display: inline-block;
-		padding: 20px 10px;
-		border-radius: 40px;
+		padding: 30px 20px;
+		font-weight: 700;
 		background: #212C62;
 		text-decoration: none;
 		color: #fff;
 		font-family: helvetica, sans-serif;
 		line-height: 0;
 		transition: all .3s ease;
+		float: right;
 			&:hover {
 				background: #45517C;
 		}
-	}
+//	}
 }
 /* menu */
 .header_menu {
@@ -180,12 +198,14 @@ picture {
 .header_menu_icon {
    cursor: pointer;
    display: inline-block;
-  //  transform: translateX(-50%);
-  //  left: 50%;
+//    transform: translateX(-50%);
+//    left: 50%;
    padding: 28px 0;
    position: relative;
-  //  margin-top: 15px;
    user-select: none;
+   @include respond-to(medium-menu) {
+   		left: -7%;	
+	}
   }
 
 .header .header_menu_icon .navicon {
@@ -243,7 +263,7 @@ picture {
 
 /*  768px */
 
-@include respond-to(medium-all) {
+@include respond-to(menu-all) {
  .header_menu {
    float: right;
    clear: none;
@@ -333,7 +353,7 @@ picture {
     padding: 100px 0 0 0;
     text-align: center;
     z-index: 0;
-    background: url(../img/pvr_consulting_opt.jpg) no-repeat center bottom;
+    background: url(../img/pvr_consulting_opt.png) no-repeat center bottom;
     @include respond-to(medium-all) {
         display: none;
     }
@@ -345,7 +365,7 @@ picture {
     height: 100px;
 }
 .section-txt {
-    margin: 15% 0;
+    margin: 25% 0 0 0;
     padding-left: 10%;
     @include flexbox();
     flex-direction: column;
@@ -355,10 +375,13 @@ picture {
     @include respond-to(small-all) {
         margin: 0;
     }
+	li {
+		padding-bottom: 3%;
+	}
 }
 
 .section-upbtn {
-    margin: 0 0 0 0;
+    margin: 8% 0 0 0;
     display: block;
   	width: 0;
   	height: 0;
@@ -391,7 +414,8 @@ picture {
 .row_1_txt {
     width: 100%;
     padding: 10% 1%;
-@include flexbox();
+	border-bottom: 10px solid #ededed;
+	@include flexbox();
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -419,13 +443,13 @@ picture {
     }
 }
 .row_2 {
-    padding: 2% 0;
+    padding: 10% 0 3% 0;
     background: #faa41a;
     h2 {
-        margin: 0 0 5% 0;
+//        margin: 0 0 5% 0;
     }
     picture {
-        margin: 50px 0;
+        margin: 4% 0 0 0;
     }
     @include respond-to(small-all) {
         display: none;
@@ -438,14 +462,14 @@ picture {
 }
 
 .row_3 {
-    padding: 2% 0;
+    padding: 10% 0 3% 0;
     color: #fff;
     background: #212c62;
     h2 {
         margin: 0 0 5% 0;
     }
     picture {
-        margin: 50px 0;
+        margin: 5% 0 0 0;
     }
     @include respond-to(small-all) {
         display: none;
@@ -729,7 +753,7 @@ picture {
 }
 
 .row_one_txt {
-    width: 40%;
+    width: 50%;
     @include flexbox();
     flex-direction: column;
     align-items: flex-start;
@@ -760,11 +784,12 @@ picture {
     display: none;
     position: relative;
 	overflow: hidden;
-	background: url('../img/pvr_consulting_retina.png') no-repeat bottom right -15%;
+	background: url('../img/pvr_consulting_retina.png') no-repeat bottom right;
+	border-bottom: 10px solid #ededed;
 	h2 {
-	   font-size: 100px;
+	   font-size: 70px;
 	   line-height: 0;
-		margin-left: -10px;
+		margin-left: -5px;
 	}
     @include respond-to(medium-all) {
         @include flexbox();
@@ -772,12 +797,18 @@ picture {
         flex-wrap: wrap;
         justify-content: space-around;
 		background-size: 50%;
-        padding-left: 4%;
     }
+	@include respond-to(medium-tv) {
+        padding-left: 4%;
+		h2 {
+			margin-top: 160px;
+			margin-bottom: 20px
+		}
+	}
 	@include respond-to(tv) {
 		background-size: 700px;
 		h2 {
-			font-size: 150px;
+			font-size: 130px;
 		}
 	}
 }
@@ -790,5 +821,17 @@ picture {
 .row_wrap {
 	max-width: 1200px;
     margin: auto;
-	//padding: 0 0 0 4%;
+	position: relative;
+	padding: 0 50px 0 0;
+	@include respond-to(hand-menu) {
+		padding: 0;
+	}
+}
+
+.wrap-tablet {
+//	background: url('../img/pvr_consulting_retina.png') no-repeat bottom right;
+}
+
+.row-2 {
+	
 }
