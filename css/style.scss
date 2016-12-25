@@ -415,7 +415,7 @@ picture {
     width: 100%;
     padding: 10% 1%;
 	border-bottom: 10px solid #ededed;
-@include flexbox();
+	@include flexbox();
     flex-direction: column;
     align-items: center;
     text-align: center;
