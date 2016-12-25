@@ -114,7 +114,7 @@ picture {
 }
 /* form custom */
 #form {
-    background: #faa41a;
+    background: url(../img/pvr_pattern_contact.png) repeat;
 }
 /* header */
 .header {
@@ -132,17 +132,19 @@ picture {
     }
    li {
        a {
-     display: block;
-     padding: 20px 20px;
-     border-right: 1px solid #f4f4f4;
-     color: #fff;
-     text-decoration: none;
-     font-weight: 600;
-  	 transition: 0.4s;
+		 display: block;
+		 padding-top: 20px;
+		 padding-bottom: 20px;
+		 padding-left: 2%;
+		 padding-right: 2%;
+		 border-right: 1px solid #f4f4f4;
+		 color: #fff;
+		 text-decoration: none;
+		 font-weight: 600;
+		 transition: 0.4s;
            &:hover {
 			  background-color: #fff;
 			  color: #EEA200;
-//              background-color: #212c62;
            }
        }
    }
@@ -151,11 +153,8 @@ picture {
 	width: 100px;
 	height: 100px;
 	margin-top: 20px;
-//	position: absolute;
-//	left: 0;
 	float: left;
 	display: block;
-	background: url(../img/pvr_logo.png) no-repeat center center;
 	@include respond-to(hand-all) {
 		display: none;
 	}
@@ -164,11 +163,6 @@ picture {
     }
 }
 .lang {
-//	display: block;
-//	right: 0;
-//	top: 0;
-//	z-index: 20;
-//	a {
 		position: absolute;
 		right: 0;
 		display: inline-block;
@@ -184,7 +178,6 @@ picture {
 			&:hover {
 				background: #45517C;
 		}
-//	}
 }
 /* menu */
 .header_menu {
@@ -198,8 +191,6 @@ picture {
 .header_menu_icon {
    cursor: pointer;
    display: inline-block;
-//    transform: translateX(-50%);
-//    left: 50%;
    padding: 28px 0;
    position: relative;
    user-select: none;
@@ -262,7 +253,6 @@ picture {
 }
 
 /*  768px */
-
 @include respond-to(menu-all) {
  .header_menu {
    float: right;
@@ -329,11 +319,6 @@ picture {
 .hovicon.effect-9.sub-a:hover {
     box-shadow: 0 0 0 10px rgba(255, 255, 255, 1);
 }
-/*
-Оранжевий - FAA41A
-Синій - 212C62
-Сірий - EDEDED
-*/
 .section {
     width: 100%;
     height: 600px;
@@ -353,7 +338,7 @@ picture {
     padding: 100px 0 0 0;
     text-align: center;
     z-index: 0;
-    background: url(../img/pvr_consulting_opt.png) no-repeat center bottom;
+    background: url(../img/02_consulting_ORIG.jpg) no-repeat center bottom;
     @include respond-to(medium-all) {
         display: none;
     }
@@ -390,8 +375,7 @@ picture {
   	opacity: .7;
   	transition: all .3s ease;
     &:hover {
-//        transform: scale(2);
-  		 border-width: 0 40px 45px 40px;
+  	   border-width: 0 40px 45px 40px;
   	   opacity: 1;
     }
 }
@@ -445,17 +429,12 @@ picture {
 .row_2 {
     padding: 10% 0 3% 0;
     background: #faa41a;
-    h2 {
-//        margin: 0 0 5% 0;
-    }
     picture {
         margin: 4% 0 0 0;
     }
     @include respond-to(small-all) {
         display: none;
     }
-}
-.row_2_txt {
 }
 .row_2_upbtn {
     border-color: transparent transparent #212C62 transparent;
@@ -561,7 +540,6 @@ picture {
     @include respond-to(small-all) {
         @include flexbox();
         flex-wrap: wrap;
-//        justify-content: flex-start;
     }
     h2 {
         margin-left: 60px
@@ -595,73 +573,6 @@ picture {
 		}
 	}
 }
-
-//.container {
-//    width: 50%;
-//    @include respond-to(small-normal) {
-//        @include flexbox();
-//		flex-direction: row;
-//        flex-wrap: wrap;
-//		justify-content: flex-start;
-//    }
-//	@include respond-to(normal) {
-//		@include flexbox();
-//    	flex-direction: column;
-//		align-items: flex-end;
-//		justify-content: space-between;
-//	}
-//
-//}
-//
-//.row_2_tablet {
-//    padding: 2% 0;
-//    display: none;
-//    position: relative;
-//	background: #faa41a;
-////    background: url(../img/pvr_build_retina.png) no-repeat center left  -20% #faa41a;
-//    @include respond-to(small-normal) {
-//        @include flexbox();
-//    	flex-direction: column;
-//    	align-items: flex-end;
-//    	justify-content: space-between;
-//        picture {
-//            margin: 0;
-//			width: 50%;
-//			height: auto;
-//        }
-//    }
-//	@include respond-to(normal) {
-//        @include flexbox();
-//    	flex-direction: column;
-//    	align-items: center;
-//    	justify-content: space-between;
-//	}
-//	@include respond-to(medium-screen) {
-//		h2 {
-//			font-size: 100px;
-//		}
-//	}
-//	@include respond-to(normal) {
-//		background-size: 50%;
-//		h2 {
-//			font-size: 150px;
-//			line-height: 0;
-//		}
-//		ul {
-//			font-size: 1.2em;
-//			li {
-//				margin-bottom: 15px;
-//			}
-//		}
-//	}
-//	@include respond-to(tv) {
-//		background-size: 700px;
-//	}
-//    h2 {
-//        margin-left: 60px;
-//
-//    }
-//}
 
 .row_2_upbtn_tablet {
     bottom: 2%;
@@ -734,10 +645,6 @@ picture {
         h2 {
 			width: 100%;
 			text-align: center;
-//            top: 0;
-//			left: 50%;
-//			transform: translateX(-50%);
-//            position: absolute;
         }
     }
 	@include respond-to(normal) {
@@ -764,9 +671,6 @@ picture {
     h2, h4 {
         margin: 0;
     }
-	h3 {
-
-	}
     ul {
         padding-left: 1%;
         text-align: left;
@@ -784,7 +688,7 @@ picture {
     display: none;
     position: relative;
 	overflow: hidden;
-	background: url('../img/pvr_consulting_retina.png') no-repeat bottom right;
+	background: url('../img/02_consulting_RET+.jpg') no-repeat bottom right;
 	border-bottom: 10px solid #ededed;
 	h2 {
 	   font-size: 70px;
@@ -813,11 +717,6 @@ picture {
 	}
 }
 
-
-
-.row_1_tablet_img {
-}
-
 .row_wrap {
 	max-width: 1200px;
     margin: auto;
@@ -826,12 +725,4 @@ picture {
 	@include respond-to(hand-menu) {
 		padding: 0;
 	}
-}
-
-.wrap-tablet {
-//	background: url('../img/pvr_consulting_retina.png') no-repeat bottom right;
-}
-
-.row-2 {
-	
 }
