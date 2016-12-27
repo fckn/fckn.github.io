@@ -1,6 +1,7 @@
 /* media */
 $phones: 319px;
 $small-screen: 599px;
+$small-rus: 720px;
 $medium-screen: 767px;
 $menu-only: 810px;
 $normal: 959px;
@@ -21,6 +22,9 @@ $tv: 1400px;
   }
   @else if $media == small-screen {
     @media only screen and (min-width: $small-screen + 1) and (max-width: $medium-screen) { @content; }
+  }
+	@else if $media == small-rus {
+    @media only screen and (min-width: $small-screen + 1) and (max-width: $small-rus) { @content; }
   }
 	@else if $media == small-normal {
     @media only screen and (min-width: $small-screen + 1) and (max-width: $normal) { @content; }
@@ -363,7 +367,7 @@ picture {
 }
 
 .section-upbtn {
-    margin: 8% 0 0 0;
+    margin: 5% 0 0 0;
     display: block;
   	width: 0;
   	height: 0;
@@ -427,7 +431,8 @@ picture {
     padding: 10% 0 3% 0;
     background: #faa41a;
     picture {
-        margin: 4% 0 0 0;
+        margin-top: 4%;
+		margin-bottom: 50px;
     }
     @include respond-to(small-all) {
         display: none;
@@ -498,6 +503,7 @@ picture {
         margin-bottom: 10px;
         &:last-child {
             margin-bottom: 0;
+			margin-right: 0;
         }
     }
 }
@@ -569,6 +575,12 @@ picture {
 			font-size: 65px;
 		}
 	}
+	@include respond-to(small-rus) {
+		h2 {
+			margin-left: 3%;
+			font-size: 40px;
+		}
+	}
 }
 
 .row_2_upbtn_tablet {
@@ -604,6 +616,12 @@ picture {
 		}
 		h2 {
 			font-size: 65px;
+		}
+	}
+	@include respond-to(small-rus) {
+		h2 {
+			margin-left: 3%;
+			font-size: 40px;
 		}
 	}
 }
@@ -686,7 +704,7 @@ picture {
     position: relative;
 	overflow: hidden;
 	background: url('../img/02_consulting_RET+.jpg') no-repeat bottom right;
-	border-bottom: 10px solid #ededed;
+//	border-bottom: 10px solid #ededed;
 	h2 {
 	   font-size: 70px;
 	   line-height: 0;
