@@ -3,7 +3,7 @@ $phones: 319px;
 $small-screen: 599px;
 $small-rus: 720px;
 $medium-screen: 767px;
-$menu-only: 810px;
+$menu-only: 890px;
 $normal: 959px;
 $normal-xl: 1250px;
 $tv: 1400px;
@@ -322,7 +322,7 @@ picture {
 }
 .section {
     width: 100%;
-    height: 600px;
+    height: 630px;
     margin: 0 auto;
     @include flexbox();
     flex-direction: column;
@@ -332,23 +332,6 @@ picture {
     @include respond-to(medium-all) {
         height: 100vh;
     }
-}
-/* section one */
-.row_1 {
-    position: relative;
-    padding: 100px 0 0 0;
-    text-align: center;
-    z-index: 0;
-    background: url(../img/02_consulting_ORIG.jpg) no-repeat center bottom;
-    @include respond-to(medium-all) {
-        display: none;
-    }
-}
-
-
-.row1_logo_mobile {
-    width: 100px;
-    height: 100px;
 }
 .section-txt {
     margin: 23% 0 0 0;
@@ -380,11 +363,130 @@ picture {
   	   opacity: 1;
     }
 }
+/* section one */
+.row_1 {
+    position: relative;
+    padding: 100px 0 0 0;
+    text-align: center;
+    z-index: 0;
+    background: url(../img/02_consulting_ORIG.jpg) no-repeat center bottom;
+    @include respond-to(medium-all) {
+        display: none;
+    }
+}
+
+.row_one_txt {
+    width: 50%;
+    @include flexbox();
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: #212c62;
+	text-align: left;
+	font-size: 1.2em;
+    h2, h4 {
+        margin: 0;
+    }
+    ul {
+        text-align: left;
+        list-style-type: disc;
+        li {
+			margin-bottom: 15px;
+            &:first-child {
+                list-style-type: none;
+            }
+        }
+    }
+}
+
+.row_1_tablet {
+    display: none;
+    position: relative;
+	overflow: hidden;
+	background: url('../img/02_consulting_RET+.jpg') no-repeat bottom right;
+//	border-bottom: 10px solid #ededed;
+	h1 {
+	    margin-left: -6px;
+		font-size: 50px;
+	}
+	h2 {
+	   font-size: 40px;
+	   line-height: 0;
+	   margin-left: -5px;
+	}
+    @include respond-to(medium-all) {
+        @include flexbox();
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+		background-size: 50%;
+    }
+	@include respond-to(medium-tv) {
+        padding-left: 4%;
+		h1 {
+			margin-top: 100px;
+//			font-size: 100px;
+		}
+		h2 {
+			margin-bottom: 20px
+		}
+	}
+	@include respond-to(normal) {
+		h1 {
+			font-size: 60px;
+		}
+		h2 {
+		   font-size: 55px;
+		}
+	}
+	@include respond-to(tv) {
+		background-size: 700px;
+		h1 {
+			font-size: 75px;
+		}
+		h2 {
+			font-size: 70px;
+		}
+	}
+}
+
+.row_wrap {
+	max-width: 1200px;
+    margin: auto;
+	position: relative;
+	padding: 0 50px 0 0;
+	@include respond-to(hand-menu) {
+		padding: 0;
+	}
+}
+.row1_logo_mobile {
+    width: 100px;
+    height: 100px;
+}
 
 .row_1_contact {
     font-size: 18px;
     line-height: 30px;
     padding: 0 0 250px 0;
+    a {
+        font-weight: 600;
+        color: #212c62;
+        text-decoration: underline;
+        transition: all .2s ease;
+        &:hover {
+            color: #faa41a;
+            text-decoration: none;
+        }
+    }
+}
+.row_1_tablet_contact {
+	position: absolute;
+	width: 200px;
+//	top: 70px;
+	right: 0;
+    font-size: 18px;
+    line-height: 30px;
+//    padding: 0 0 250px 0;
     a {
         font-weight: 600;
         color: #212c62;
@@ -427,6 +529,7 @@ picture {
         display: none;
     }
 }
+/* row _2 */
 .row_2 {
     padding: 10% 0 3% 0;
     background: #faa41a;
@@ -470,74 +573,6 @@ picture {
     border-color: transparent transparent #FAA41A transparent;
 }
 
-.row_4 {
-    padding: 2% 0;
-    background: #ededed;
-    @include respond-to(small-all) {
-        display: none;
-    }
-}
-
-.row_4_inner {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    a {
-        color: #212c62;
-        text-decoration: underline;
-        transition: all .2s ease;
-        &:hover {
-            color: #faa41a;
-            text-decoration: none;
-        }
-    }
-}
-
-.row_4_upbtn {
-    border-color: transparent transparent #faa41a transparent;
-}
-.footer_content {
-    text-align: center;
-    li {
-        display: block;
-        margin-bottom: 10px;
-        &:last-child {
-            margin-bottom: 0;
-			margin-right: 0;
-        }
-    }
-}
-
-.footer {
-    background: #212c62;
-    color: #fff;
-    padding: 2% 0;
-}
-
-.footer_content_copyright {
-    font-size: 12px;
-}
-
-.footer_content_dev {
-    font-size: 14px;
-}
-
-.footer_content_nav {
-    margin-bottom: 2%;
-    a {
-        font-weight: 700;
-        color: #faa41a;
-    }
-    @include respond-to(small-all) {
-        li {
-            display: inline-block;
-            margin-right: 30px;
-
-        }
-    }
-}
-
-
 .container {
     width: 50%;
     @include respond-to(small-all) {
@@ -557,8 +592,8 @@ picture {
     position: relative;
 	background: url(../img/pvr_pattern_build.png) repeat #faa41a;
 	h2 {
-		margin-left: 10%;
 		font-size: 40px;
+		margin-left: 10%;
 	}
     @include respond-to(small-all) {
         @include flexbox();
@@ -633,7 +668,33 @@ picture {
     position: absolute;
     border-color: transparent transparent #FAA41A transparent;
 }
+/* row_4 */
+.row_4 {
+    padding: 2% 0;
+    background: #ededed;
+    @include respond-to(small-all) {
+        display: none;
+    }
+}
 
+.row_4_inner {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    a {
+        color: #212c62;
+        text-decoration: underline;
+        transition: all .2s ease;
+        &:hover {
+            color: #faa41a;
+            text-decoration: none;
+        }
+    }
+}
+
+.row_4_upbtn {
+    border-color: transparent transparent #faa41a transparent;
+}
 .row_4_tablet {
     position: relative;
     display: none;
@@ -673,71 +734,89 @@ picture {
 .row_4_container {
     margin-right: 100px;
 }
-
-.row_one_txt {
-    width: 50%;
-    @include flexbox();
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    color: #212c62;
-	text-align: left;
-	font-size: 1.2em;
-    h2, h4 {
-        margin: 0;
-    }
-    ul {
-        padding-left: 1%;
-        text-align: left;
-        list-style-type: disc;
-        li {
-			margin-bottom: 15px;
-            &:first-child {
-                list-style-type: none;
-            }
-        }
-    }
-}
-
-.row_1_tablet {
+/* row_5 */
+.row_5_tablet {
+    padding: 2% 0;
     display: none;
-    position: relative;
 	overflow: hidden;
-	background: url('../img/02_consulting_RET+.jpg') no-repeat bottom right;
-//	border-bottom: 10px solid #ededed;
+    position: relative;
+	background: url(../img/pvr_pattern_heat.png) repeat #faa41a;
 	h2 {
-	   font-size: 70px;
-	   line-height: 0;
-		margin-left: -5px;
+		font-size: 40px;
+		margin-left: 10%;
 	}
-    @include respond-to(medium-all) {
+    @include respond-to(small-all) {
         @include flexbox();
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-		background-size: 50%;
     }
-	@include respond-to(medium-tv) {
-        padding-left: 4%;
+	@include respond-to(normal) {
+		font-size: 24px;
+		picture {
+			width: 40%;
+		}
 		h2 {
-			margin-top: 160px;
-			margin-bottom: 20px
+			font-size: 65px;
 		}
 	}
-	@include respond-to(tv) {
-		background-size: 700px;
+	@include respond-to(small-rus) {
 		h2 {
-			font-size: 130px;
+			margin-left: 3%;
+			font-size: 40px;
 		}
 	}
 }
+/* footer */
+.footer {
+    background: #212c62;
+    color: #fff;
+    padding: 2% 0;
+}
 
-.row_wrap {
-	max-width: 1200px;
-    margin: auto;
-	position: relative;
-	padding: 0 50px 0 0;
-	@include respond-to(hand-menu) {
-		padding: 0;
+.footer_content {
+    text-align: center;
+    li {
+        display: block;
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+			margin-right: 0;
+        }
+    }
+}
+
+.footer_content_copyright {
+    font-size: 12px;
+}
+
+.footer_content_dev {
+    font-size: 14px;
+}
+
+.footer_content_nav {
+    margin-bottom: 2%;
+    a {
+        font-weight: 700;
+        color: #faa41a;
+    }
+    @include respond-to(small-all) {
+        li {
+            display: inline-block;
+            margin-right: 30px;
+
+        }
+    }
+}
+.row_5_txt {
+	a { 
+		font-size: 26px;
+		color: #212c62;
+		text-decoration: underline;
+	}
+	li {
+		&:last-of-type {
+			list-style-type: none;
+		}
 	}
 }
